@@ -11,6 +11,7 @@ interface IProps {
   validation?: object;
   label?: string;
   disabled?: boolean;
+  width?: string;
 }
 
 const FormInput = ({
@@ -22,6 +23,7 @@ const FormInput = ({
   validation,
   label,
   disabled = false,
+  width,
 }: IProps) => {
   const {
     control,
@@ -46,9 +48,11 @@ const FormInput = ({
             type={type}
             placeholder={placeholder}
             {...field}
-            value={value ? value : field?.value}
+            // value={value ? value : field?.value}
             disabled={disabled}
-            className="focus:outline-none md:text-lg p-2 w-72 md:w-80 lg:w-96  rounded border-2 border-solid border-[#3c6e71] box-border accent-text"
+            className={`focus:outline-none md:text-lg p-2 ${
+              width ? width : "w-72 md:w-80 lg:w-96"
+            }  rounded border border-solid border-[#3c6e71] box-border accent-text`}
           />
         )}
       />

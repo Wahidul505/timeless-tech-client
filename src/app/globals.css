@@ -50,3 +50,8 @@ body {
   width: 382px;
   font-size: 40px;
 }
+
+.card {
+  height: 400px;
+  width: 600px;
+}

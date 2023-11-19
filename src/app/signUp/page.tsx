@@ -32,7 +32,7 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="h-screen flex justify-center items-center ">
+    <div className="flex justify-center items-center ">
       <div className="grid grid-cols-1 lg:grid-cols-2 w-11/12 md:w-1/2 lg:w-3/4 shadow-gray-300 shadow-xl rounded h-3/4 overflow-hidden">
         <div className="h-full hidden lg:block">
           <Image
@@ -45,10 +45,10 @@ const SignUpPage = () => {
         </div>
         <div className="p-8 md:p-12">
           <Heading label="Create" subLabel="an Account" />
-          <Form submitHandler={handleSubmit}>
+          <Form submitHandler={handleSubmit} doReset={false}>
             <FormInput name="name" label="Name" />
             <FormInput name="email" label="Email Address" />
-            <FormInput name="password" label="Password" />
+            <FormInput name="password" label="Password" type="password" />
             <PrimaryButton label="Signup" type="submit" />
             <Link href={"/signIn"} className="mt-4 secondary-text">
               Already have an Account?

@@ -6,6 +6,7 @@ type IFormConfig = {
   defaultValues?: Record<string, any>;
   resolver?: any;
   doReset?: boolean;
+  center?: boolean;
 };
 
 type IFormProps = {
@@ -19,6 +20,7 @@ const Form = ({
   defaultValues,
   resolver,
   doReset = true,
+  center = true,
 }: IFormProps) => {
   const formConfig: IFormConfig = {};
   if (!!defaultValues) formConfig["defaultValues"] = defaultValues;
@@ -40,7 +42,7 @@ const Form = ({
     <FormProvider {...methods}>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col items-center"
+        className={center ? "flex flex-col items-center" : ""}
       >
         {children}
       </form>

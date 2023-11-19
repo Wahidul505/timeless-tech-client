@@ -13,7 +13,15 @@ export const orderApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: [tagTypes.order],
     }),
+
+    singleOrder: build.query({
+      query: (id: string) => ({
+        url: `${ORDER_API}/${id}`,
+        method: "GET",
+      }),
+      providesTags: [tagTypes.order],
+    }),
   }),
 });
 
-export const { usePlaceOrderMutation } = orderApi;
+export const { usePlaceOrderMutation, useSingleOrderQuery } = orderApi;
