@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-shadow: none;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+.active {
+  color: white;
+}
+
+.font-heading {
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.primary-text {
+  color: #284b63;
+}
+
+.secondary-text {
+  color: #3c6e71;
+}
+
+.accent-text {
+  color: #353535;
+}
+
+.primary-bg {
+  background-color: #284b63;
+}
+
+.secondary-bg {
+  background-color: #3c6e71;
+}
+
+.accent-bg {
+  background-color: #353535;
+}
+
+.input {
+  width: 382px;
+  font-size: 40px;
+}
